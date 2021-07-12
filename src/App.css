@@ -2,7 +2,7 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
 body {
   margin: 0;
   background: rgb(102, 102, 102);
@@ -17,32 +17,44 @@ body {
   flex-direction: column;
 }
 
-.heading{
+.heading {
   margin-bottom: 50px;
   font-size: 3em;
-  background-color:rgb(48, 48, 48);
+  background-color: rgb(48, 48, 48);
   border-radius: 10px;
   color: white;
   padding: 10px 30px;
-  font-family: 'Cedarville Cursive', cursive;
+  font-family: "Cedarville Cursive", cursive;
   line-height: 1;
 }
 
 .heading > span {
-  font-family: 'Cedarville Cursive', cursive;
-  font-size: .4em;
+  font-family: "Cedarville Cursive", cursive;
+  font-size: 0.4em;
   float: right;
 }
 
-.ins{
-  margin-bottom: 50px;
+.ins {
+  margin-bottom: 20px;
   font-size: 1em;
-  background-color:rgb(48, 48, 48);
+  background-color: rgb(48, 48, 48);
   border-radius: 10px;
   color: white;
-  padding: 10px 30px;
+  padding: 20px 30px;
   line-height: 2;
   letter-spacing: 2px;
+}
+
+table,
+td,
+th {
+  border: 0.5px solid white;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 1px;
+}
+td {
+  padding: 3px 30px;
 }
 
 .piano {
@@ -80,7 +92,8 @@ body {
     0 0 3px rgba(0, 0, 0, 0.2);
   background: linear-gradient(to bottom, #eee 0%, #fff 100%);
 }
-.white:active {
+.white:active,
+.pressed_w {
   border-top: 1px solid #777;
   border-left: 1px solid #999;
   border-bottom: 1px solid #999;
@@ -101,10 +114,33 @@ body {
   background: linear-gradient(45deg, #222 0%, #555 100%);
 }
 
-.black:active {
+.black:active,
+.pressed_b {
   box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2) inset,
     0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
   background: linear-gradient(to right, #444 0%, #222 100%);
+}
+
+.bk_label {
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  height: 90%;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.wk_label {
+  font-size: 12px;
+  display: flex;
+  height: 90%;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+}
+::selection{
+  background: transparent;
 }
 
 .a,
@@ -146,11 +182,15 @@ body {
   .b {
     width: 3.4em;
   }
-  .heading{
+  .heading {
     display: none;
   }
-  .ins{
+  .ins {
     display: none;
+  }
+  .bk_label,
+  .wk_label {
+    font-size: 10px;
   }
 }
 @media (max-width: 600px) {
@@ -160,7 +200,7 @@ body {
   .piano {
     display: none;
   }
-  .heading{
+  .heading {
     display: block;
   }
 }
